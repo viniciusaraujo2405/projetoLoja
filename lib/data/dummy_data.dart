@@ -1,7 +1,7 @@
 import '../models/product.dart';
 
 final dummyProducts = [
-  [
+  
     Product(
       id: 'p1',
       title: 'Red Shirt',
@@ -34,5 +34,5 @@ final dummyProducts = [
       imageUrl:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
     ),
-  ]
+  
 ];
