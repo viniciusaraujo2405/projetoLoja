@@ -1,11 +1,15 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class ProductsOverviewPage extends StatelessWidget{
   const ProductsOverviewPage ({Key ? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context){
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Minha Loja'),
+      ),
+    );
   }
 
 
