@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/components/cart_item_widget.dart';
-import 'package:shop/models/cart_item.dart';
 
 import '../models/cart.dart';
 
@@ -47,14 +46,14 @@ class CartPage extends StatelessWidget {
                   ),
                   Spacer(),
                   TextButton(
-                    child: Text('COMPRAR'),
                     style: TextButton.styleFrom(
-                      textStyle: TextStyle(
+                    textStyle: TextStyle(
                         color: Theme.of(context).primaryColor,
                       ),
                       
                     ),
                     onPressed: (){},
+                    child: Text('COMPRAR'),
                   ),
                 ],
               ),
