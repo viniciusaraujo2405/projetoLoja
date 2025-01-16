@@ -19,18 +19,18 @@ class CartItemWidget extends StatelessWidget {
       direction: DismissDirection.endToStart,
       background: Container(
         color: Colors.redAccent,
-        child: Icon(
-          Icons.delete,
-          color: Colors.white,
-          size: 40,
-        ),
+       
         alignment: Alignment.centerRight,
         padding: const EdgeInsets.only(right: 20),
         margin: const EdgeInsets.symmetric(
           horizontal: 15,
           vertical: 4,
         ),
-        
+         child: Icon(
+          Icons.delete,
+          color: Colors.white,
+          size: 40,
+        ),
       ),
       onDismissed: (_) {
         Provider.of<Cart>(context,
