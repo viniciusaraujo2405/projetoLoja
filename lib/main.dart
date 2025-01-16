@@ -6,6 +6,7 @@ import 'package:shop/pages/product_detail_page.dart';
 import 'package:shop/pages/products_overview_page.dart';
 import 'package:shop/utils/app_routes.dart';
 
+import 'models/order_list.dart';
 import 'pages/cart_page.dart';
 
 void main() {
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => Cart(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => OrderList(),
         ),
       ],
       child: MaterialApp(
