@@ -51,7 +51,37 @@ final dummyProducts = [
       imageUrl: 
           'https://imgnike-a.akamaihd.net/360x360/02870551A8.jpg'
     ),
-    
-
+    Product(
+      id: 'p7',
+      title: 'Camisa do Brasil',
+      description: 'A camisa da melhor seleção do mundo.',
+      price: 300.00,
+      imageUrl: 
+        'https://th.bing.com/th/id/OIP.-tymwzQUm7IQvO12hv9HCwHaHa?rs=1&pid=ImgDetMain'
+    ),
+    Product(
+      id: 'p8',
+      title: 'Raquete',
+      description: 'Raquete de tênis Wilson Pro Staff 97L.',
+      price: 1666.55,
+      imageUrl: 
+      'https://www.bing.com/th?id=OPHS.SZ5dGt6GMeZtpQ474C474&o=5&pid=21.1&w=148&h=223&qlt=100&dpr=1&bw=6&bc=FFFFFF',
+    ),
+    Product(
+      id: 'p9',
+      title: 'Camisa da PaiN',
+      description: 'A camisa de e-sports mais bonita do Brasil.',
+      price: 200.00,
+      imageUrl: 
+        'https://soupain.vteximg.com.br/arquivos/ids/156653-420-478/4corsair.png?v=638477532859700000',
+    ),
+    Product(
+      id: 'p10',
+      title: 'Camisa da Imperial',
+      description : 'Camisa do time de e-sports Imperial.',
+      price: 200.00,
+      imageUrl: 
+        'https://http2.mlstatic.com/D_NQ_NP_784571-MLB52217698120_102022-O.webp'
+    )
   
 ];
