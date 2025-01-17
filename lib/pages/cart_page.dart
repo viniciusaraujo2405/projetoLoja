@@ -13,6 +13,33 @@ class CartPage extends StatelessWidget {
     final Cart cart = Provider.of(context);
     final items = cart.items.values.toList();
 
+
+    void _askCreditInstallments(BuildContext context) {
+      TextEditingController installmentsController = TextEditingController();
+        showDialog(
+          context: context,
+          builder: (ctx) {
+            return AlertDialog(
+              title: Text("Parcelamento"),
+              content: TextField(
+                  controller: installmentsController,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(hintText: "Digite o número de parcelas"),
+                  ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito (${installmentsController.text}x)");
+                    },
+              child: Text("OK"),
+          ),
+        ],
+      );
+    },
+  );
+}
+
     void _showPaymentMethodDialog(BuildContext context) {
         showDialog(
           context: context,
