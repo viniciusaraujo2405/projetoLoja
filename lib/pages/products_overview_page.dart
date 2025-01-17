@@ -27,12 +27,14 @@ class ProductsOverviewPage extends StatelessWidget{
             icon: Icon(Icons.more_vert),
             itemBuilder: (_)=>[
               PopupMenuItem(
-                child: Text('Somente Favoritos'),
+                
                 value: FilterOptions.Favorite,
+                child: Text('Somente Favoritos'),
               ),
               PopupMenuItem(
-                child: Text('Todos'),
+                
                 value: FilterOptions.All,
+                child: Text('Todos'),
               ),
             ],
             onSelected: (FilterOptions selectedValue){
