@@ -46,6 +46,13 @@ class CartPage extends StatelessWidget {
                     ),
                   ),
                   Spacer(),
+
+                  ElevatedButton(
+                    onPressed: (){
+                      _showPaymentMethodDialog(context);
+                    },
+                    child: Text('PAGAMENTO'),
+                  ),
                   TextButton(
                     style: TextButton.styleFrom(
                     textStyle: TextStyle(
