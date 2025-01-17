@@ -37,6 +37,11 @@ class AppDrawer extends StatelessWidget{
           ListTile(
             leading: Icon(Icons.payment),
             title: Text("Meus cartões"),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(
+                AppRoutes.CARD,
+                );
+            },
           )
         ],
       ),
