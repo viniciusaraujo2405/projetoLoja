@@ -151,18 +151,18 @@ class CartPage extends StatelessWidget {
         children: [
           Card(
             margin: EdgeInsets.symmetric(
-              horizontal: 15,
-              vertical: 25,
+              horizontal: 8,
+              vertical: 30,
             ),
             child: Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Total',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 15,
                     ),
                   ),
                   SizedBox(width: 10,),
