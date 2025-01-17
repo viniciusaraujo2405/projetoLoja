@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'Lato',
           colorScheme: ColorScheme.light(
-            primary: Colors.purple,
+            primary: Colors.lightBlueAccent,
             secondary: Colors.lightBlue,
             
           ),
