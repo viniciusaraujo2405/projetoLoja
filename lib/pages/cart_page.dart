@@ -13,6 +13,29 @@ class CartPage extends StatelessWidget {
     final Cart cart = Provider.of(context);
     final items = cart.items.values.toList();
 
+    void _showPaymentMethodDialog(BuildContext context) {
+        showDialog(
+          context: context,
+          builder: (ctx) {
+              return AlertDialog(
+                title: Text("Selecione o Método de Pagamento"),
+                content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ListTile(
+                        title: Text("Crédito"),
+                        onTap: () {
+                          Navigator.of(ctx).pop();
+                          _askCreditInstallments(context);
+                        },
+                      ),
+            ],
+        ),
+      );
+    },
+  );
+}
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Carrinho'),
