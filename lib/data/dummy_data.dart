@@ -4,35 +4,36 @@ final dummyProducts = [
   
     Product(
       id: 'p1',
-      title: 'Camisa vermelha',
-      description: 'Camisa vermelha básica',
-      price: 29.99,
+      title: 'Relógio Orient Masculino',
+      description: 'linha: Orient Automatic Três Estrelas vidro: Cristal Mineral funções: Automático, Analógico, Calendário Mensal, Calendário Semanal com opção em Português resistência à água: 100 M características: com caixa Aço inoxidável e pulseira Aço Inoxidável',
+      price: 999.90,
       imageUrl:
-          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+          'https://th.bing.com/th?id=OPHS.nI39rzinqQpoDA474C474&w=300&h=300&qlt=20&o=5&pid=21.1'
     ),
     Product(
       id: 'p2',
-      title: 'Calça',
-      description: 'Uma calça confortável para o dia a dia.',
-      price: 59.99,
+      title: 'Perfume',
+      description: 'Perfume dior sauvage eau forte masculino parfum',
+      price: 1209.00,
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
+          'https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwd71a57b5/images/hi-res-BR/1.3348901728836.jpg?sw=1200&sh=1200&sm=fit',
+        
     ),
     Product(
       id: 'p3',
-      title: 'Cachecol Amarelo',
-      description: 'Quente e confortável - Exatamente o que você precisa para o inverno.',
-      price: 19.99,
+      title: 'Bolsa',
+      description: 'Luxo e exclusividade',
+      price: 1000000,
       imageUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
+          'https://mundobolsa.com.br/wp-content/uploads/2021/02/vermelha.jpg',
     ),
     Product(
       id: 'p4',
-      title: 'Panela',
-      description: 'Prepare qualquer refeição que você queria com essa panela.',
-      price: 49.99,
-      imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
+      title: 'Raquete',
+      description: 'Raquete de tênis Wilson Pro Staff 97L.',
+      price: 1666.55,
+      imageUrl: 
+      'https://www.bing.com/th?id=OPHS.SZ5dGt6GMeZtpQ474C474&o=5&pid=21.1&w=148&h=223&qlt=100&dpr=1&bw=6&bc=FFFFFF',
     ),
 
     Product(
@@ -43,13 +44,14 @@ final dummyProducts = [
       imageUrl: 
           'https://th.bing.com/th/id/OPHS.55HutwNlxWqeNQ474C474?o=5&pid=21.1&w=160&h=160'
     ),
+    
     Product(
       id: 'p6',
-      title: 'Camisa do Corinthians',
-      description: 'A Camisa do melhor time do mundo.',
-      price: 332.49,
+      title: 'Camisa do Santos',
+      description: 'Camisa do Santos do Neymar 2012.',
+      price: 300.00,
       imageUrl: 
-          'https://imgnike-a.akamaihd.net/360x360/02870551A8.jpg'
+      'https://assets.panshop.pl/503443/19334/7/1/7363/1383888217624f001694723.jpg',
     ),
     Product(
       id: 'p7',
@@ -61,12 +63,13 @@ final dummyProducts = [
     ),
     Product(
       id: 'p8',
-      title: 'Raquete',
-      description: 'Raquete de tênis Wilson Pro Staff 97L.',
-      price: 1666.55,
+      title: 'Camisa do Corinthians',
+      description: 'A Camisa do melhor time do mundo.',
+      price: 332.49,
       imageUrl: 
-      'https://www.bing.com/th?id=OPHS.SZ5dGt6GMeZtpQ474C474&o=5&pid=21.1&w=148&h=223&qlt=100&dpr=1&bw=6&bc=FFFFFF',
+          'https://imgnike-a.akamaihd.net/360x360/02870551A8.jpg'
     ),
+    
     Product(
       id: 'p9',
       title: 'Camisa da PaiN',
