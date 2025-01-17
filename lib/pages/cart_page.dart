@@ -13,33 +13,98 @@ class CartPage extends StatelessWidget {
     final Cart cart = Provider.of(context);
     final items = cart.items.values.toList();
 
-
-    void _askCreditInstallments(BuildContext context) {
-      TextEditingController installmentsController = TextEditingController();
+    void _showSelectedPayment(BuildContext context, String paymentMethod) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Método de pagamento selecionado: $paymentMethod"),
+          ),
+        );
+      }
+    void _askCredit(BuildContext context) {
         showDialog(
-          context: context,
+          context: context, 
           builder: (ctx) {
             return AlertDialog(
-              title: Text("Parcelamento"),
-              content: TextField(
-                  controller: installmentsController,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(hintText: "Digite o número de parcelas"),
-                  ),
-              actions: [
-                TextButton(
-                  onPressed: () {
+              title: Text("Selecione o número de parcelas"),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ListTile(
+                    title: Text("1x"),
+                    onTap: () {
                       Navigator.of(ctx).pop();
-                      _showSelectedPayment(context, "Crédito (${installmentsController.text}x)");
+                      _showSelectedPayment(context, "Crédito 1x");
                     },
-              child: Text("OK"),
-          ),
-        ],
-      );
-    },
-  );
-}
-
+                  ),
+                  ListTile(
+                    title: Text("2x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 2x");
+                    },
+                  ),
+                  ListTile(
+                    title: Text("3x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 3x");
+                    },
+                  ),
+                  ListTile(
+                    title: Text("4x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 4x");
+                    },
+                  ),
+                  ListTile(
+                    title: Text("5x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 5x");
+                    },
+                  ),
+                  ListTile(
+                    title: Text("6x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 6x");
+                    },
+                  ),
+                  ListTile(
+                    title: Text("7x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 7x");
+                    },
+                  ),
+                  ListTile(
+                    title: Text("8x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 8x");
+                    },
+                  ),
+                  ListTile(
+                    title: Text("9x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 9x");
+                    },
+                  ),
+                  ListTile(
+                    title: Text("10x"),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Crédito 10x");
+                    },
+                  ),
+                ],
+              ),
+            );
+          }
+        );
+    }
     void _showPaymentMethodDialog(BuildContext context) {
         showDialog(
           context: context,
@@ -53,7 +118,7 @@ class CartPage extends StatelessWidget {
                         title: Text("Crédito"),
                         onTap: () {
                           Navigator.of(ctx).pop();
-                          _askCreditInstallments(context);
+                          _askCredit(context);
                         },
                       ),
                       ListTile(
