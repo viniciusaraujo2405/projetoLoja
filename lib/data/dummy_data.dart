@@ -34,5 +34,15 @@ final dummyProducts = [
       imageUrl:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
     ),
+
+    Product(
+      id: 'p5',
+      title: 'A Nike Shoe',
+      description: 'A nice pair of Nike shoe.',
+      price: 99.99,
+      imageUrl: 
+          'https://th.bing.com/th/id/OPHS.55HutwNlxWqeNQ474C474?o=5&pid=21.1&w=160&h=160'
+    ),
+    
   
 ];
