@@ -29,6 +29,21 @@ class CartPage extends StatelessWidget {
                           _askCreditInstallments(context);
                         },
                       ),
+                      ListTile(
+                        title: Text("Débito"),
+                        onTap: () {
+                          Navigator.of(ctx).pop();
+                          _showSelectedPayment(context, "Débito");
+                      },
+                      ),
+                      ListTile(
+                        title: Text("Pix"),
+                        onTap: () {
+                          Navigator.of(ctx).pop();
+                          _showSelectedPayment(context, "Pix");
+                      },
+                    ),
+
             ],
         ),
       );
