@@ -8,7 +8,7 @@ class CardPage extends StatefulWidget {
 }
 
 class _CardPageState extends State<CardPage> {
-
+  List<Map<String,String>> cartoes = [];
   void _abrirFormularioCartao() {
     Navigator.push(
       context,
@@ -17,10 +17,17 @@ class _CardPageState extends State<CardPage> {
       ),
     );
   }
+
+   void _adicionarCartao(Map<String, String> cartao) {
+    setState(() {
+      cartoes.add(cartao);
+    });
+    Navigator.pop(context);
+  }
   @override
   Widget build(BuildContext context) {
 
-    List<Map<String,String>> cartoes = [];
+    
 
     return Scaffold(
       appBar: AppBar(
