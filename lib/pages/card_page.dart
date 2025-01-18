@@ -8,6 +8,15 @@ class CardPage extends StatefulWidget {
 }
 
 class _CardPageState extends State<CardPage> {
+
+  void _abrirFormularioCartao() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => AdicionarCartaoPage(onSubmit: _adicionarCartao),
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
 
