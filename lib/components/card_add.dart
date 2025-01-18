@@ -42,6 +42,11 @@ class AdicionarCartaoPage extends StatefulWidget {
                 validator: (value) => value!.isEmpty ? "Campo obrigatório" : null,
                 onSaved: (value) => cvv = value,
               ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: _salvarCartao,
+                child: Text("Salvar"),
+              )
             ]
           ),
         ),
