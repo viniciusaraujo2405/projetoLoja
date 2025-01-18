@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/components/app_drawer.dart';
+import 'package:shop/components/card_add.dart';
 
 class CardPage extends StatefulWidget {
   const CardPage({Key? key}) : super(key: key);
@@ -30,6 +32,7 @@ class _CardPageState extends State<CardPage> {
       return Scaffold(
       appBar: AppBar(
         title: Text("Meus cartões"),
+        centerTitle: true,
       ),
       body: cartoes.isEmpty ? Center(
         child: Text("Nenhum cartão cadastrado."))
@@ -47,6 +50,7 @@ class _CardPageState extends State<CardPage> {
           onPressed: _abrirFormularioCartao,
           child: Icon(Icons.add),
         ),
+        drawer: AppDrawer(),
       );
       
     }

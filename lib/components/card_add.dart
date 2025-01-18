@@ -12,6 +12,18 @@ class AdicionarCartaoPage extends StatefulWidget {
     final _formKey = GlobalKey<FormState>();
     String? nome, numero, validade, cvv;
 
+  void _salvarCartao() {
+    if (_formKey.currentState?.validate() ?? false) {
+      _formKey.currentState?.save();
+      widget.onSubmit({
+        'nome': nome!,
+        'numero': numero!,
+        'validade': validade!,
+        'cvv': cvv!,
+      });
+    }
+  }
+   
    @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,18 +63,6 @@ class AdicionarCartaoPage extends StatefulWidget {
           ),
         ),
       ),
-    ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+    );
+    }
+  }
