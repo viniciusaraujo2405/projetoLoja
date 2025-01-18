@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:shop/components/cart_item_widget.dart';
 import 'package:shop/models/order_list.dart';
 
+import '../components/card_list.dart';
 import '../models/cart.dart';
 
 class CartPage extends StatelessWidget {
@@ -11,6 +12,8 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final Cart cart = Provider.of(context);
+    final cardList = Provider.of<CardList>(context, listen: false);
+
     final items = cart.items.values.toList();
 
     void _showSelectedPayment(BuildContext context, String paymentMethod) {
@@ -134,7 +137,27 @@ class CartPage extends StatelessWidget {
                           Navigator.of(ctx).pop();
                           _showSelectedPayment(context, "Pix");
                       },
+                      
                     ),
+                    if (cardList.hasCards) ...[
+                Divider(),
+                Text(
+                  "Cartões Cadastrados",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                ...cardList.cards.map((card) {
+                  return ListTile(
+                    title: Text(card['nome'] ?? ''),
+                    subtitle: Text(
+                      "**** **** **** ${card['numero']?.substring(card['numero']!.length - 4)}",
+                    ),
+                    onTap: () {
+                      Navigator.of(ctx).pop();
+                      _showSelectedPayment(context, "Cartão: ${card['nome']}");
+                    },
+                  );
+                }).toList(),
+              ],
 
             ],
         ),
