@@ -29,7 +29,11 @@ class _CardPageState extends State<CardPage> {
             );
           },
         ),
-      ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: _abrirFormularioCartao,
+          child: Icon(Icons.add),
+        ),
       );
+      
     }
   }
