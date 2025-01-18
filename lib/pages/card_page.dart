@@ -27,9 +27,7 @@ class _CardPageState extends State<CardPage> {
   @override
   Widget build(BuildContext context) {
 
-    
-
-    return Scaffold(
+      return Scaffold(
       appBar: AppBar(
         title: Text("Meus cartões"),
       ),
