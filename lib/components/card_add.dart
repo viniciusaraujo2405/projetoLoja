@@ -20,7 +20,30 @@ class AdicionarCartaoPage extends StatefulWidget {
         padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
-          child: Column(),
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: InputDecoration(labelText: "Nome"),
+                validator: (value) => value!.isEmpty ? "Campo obrigatório" : null,
+                onSaved: (value) => nome = value,
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: "Número"),
+                validator: (value) => value!.isEmpty ? "Campo obrigatório" : null,
+                onSaved: (value) => numero = value,
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: "Validade"),
+                validator: (value) => value!.isEmpty ? "Campo obrigatório" : null,
+                onSaved: (value) => validade = value,
+              ),
+              TextFormField(
+                decoration: InputDecoration(labelText: "CVV"),
+                validator: (value) => value!.isEmpty ? "Campo obrigatório" : null,
+                onSaved: (value) => cvv = value,
+              ),
+            ]
+          ),
         ),
       ),
     ),
