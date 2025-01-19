@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CardManager with ChangeNotifier {
-  List<Map<String, String>> _cartoes = [];
+  final List<Map<String, String>> _cards = [];
 
-  List<Map<String, String>> get cartoes {
-    return [..._cartoes]; // Retorna uma cópia da lista
-  }
+  List<Map<String, String>> get cards => [..._cards];
 
-  void adicionarCartao(Map<String, String> cartao) {
-    _cartoes.add(cartao);
-    notifyListeners(); // Notifica os ouvintes da mudança
+  void addCard(Map<String, String> card) {
+    _cards.add(card);
+    notifyListeners();
   }
 }

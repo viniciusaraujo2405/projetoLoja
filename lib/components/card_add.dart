@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop/models/card_manager.dart';
 
 
 class AdicionarCartaoPage extends StatefulWidget {
@@ -12,17 +14,31 @@ class AdicionarCartaoPage extends StatefulWidget {
     final _formKey = GlobalKey<FormState>();
     String? nome, numero, validade, cvv;
 
+  
   void _salvarCartao() {
     if (_formKey.currentState?.validate() ?? false) {
       _formKey.currentState?.save();
-      widget.onSubmit({
+
+      final novoCartao = {
         'nome': nome!,
         'numero': numero!,
         'validade': validade!,
         'cvv': cvv!,
-      });
+      };
+
+      // Adicionar o cartão ao CardManager
+      Provider.of<CardManager>(context, listen: false).addCard(novoCartao);
+
+      // Mostrar mensagem de sucesso
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Cartão salvo com sucesso!")),
+      );
+
+      // Voltar para a tela anterior
+      Navigator.of(context).pop();
     }
   }
+
    
    @override
   Widget build(BuildContext context) {
