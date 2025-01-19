@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => OrderList(),
         ),
-      
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -59,4 +58,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

@@ -11,7 +11,6 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final Cart cart = Provider.of(context);
-
     final items = cart.items.values.toList();
 
     void _showSelectedPayment(BuildContext context, String paymentMethod) {
@@ -135,9 +134,7 @@ class CartPage extends StatelessWidget {
                           Navigator.of(ctx).pop();
                           _showSelectedPayment(context, "Pix");
                       },
-                      
                     ),
-                    
 
             ],
         ),
