@@ -8,6 +8,7 @@ import 'package:shop/pages/product_detail_page.dart';
 import 'package:shop/pages/products_overview_page.dart';
 import 'package:shop/utils/app_routes.dart';
 
+import 'models/card_manager.dart';
 import 'models/order_list.dart';
 import 'pages/cart_page.dart';
 
@@ -31,6 +32,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => OrderList(),
         ),
+        ChangeNotifierProvider(
+          create: (_) => CardManager(),
+        ),
+        
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

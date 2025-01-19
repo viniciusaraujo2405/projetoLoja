@@ -10,9 +10,9 @@ class CardPage extends StatefulWidget {
 }
 
 class _CardPageState extends State<CardPage> {
-  List<Map<String, String>> cartoes = []; // Lista de cartões cadastrados.
+  List<Map<String, String>> cartoes = []; 
 
-  // Abre o formulário para adicionar um cartão.
+  
   void _abrirFormularioCartao() {
     Navigator.push(
       context,
@@ -22,13 +22,13 @@ class _CardPageState extends State<CardPage> {
     );
   }
 
-  // Adiciona o cartão na lista e atualiza a tela.
+  
   void _adicionarCartao(Map<String, String> cartao) {
     setState(() {
-      cartoes.add(cartao); // Adiciona o novo cartão à lista.
+      cartoes.add(cartao); 
     });
 
-    // Exibe uma mensagem de sucesso.
+    
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Cartão adicionado com sucesso!')),
     );
@@ -60,10 +60,10 @@ class _CardPageState extends State<CardPage> {
                       icon: const Icon(Icons.delete, color: Colors.red),
                       onPressed: () {
                         setState(() {
-                          cartoes.removeAt(index); // Remove o cartão da lista.
+                          cartoes.removeAt(index); 
                         });
 
-                        // Exibe uma mensagem de remoção.
+                       
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Cartão removido.')),
                         );
@@ -77,7 +77,7 @@ class _CardPageState extends State<CardPage> {
         onPressed: _abrirFormularioCartao,
         child: const Icon(Icons.add),
       ),
-      drawer: const AppDrawer(), // Menu lateral.
+      drawer: const AppDrawer(), 
     );
   }
 }

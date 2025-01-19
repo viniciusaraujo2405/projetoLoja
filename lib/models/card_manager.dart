@@ -4,11 +4,11 @@ class CardManager with ChangeNotifier {
   List<Map<String, String>> _cartoes = [];
 
   List<Map<String, String>> get cartoes {
-    return [..._cartoes]; // Retorna uma cópia da lista
+    return [..._cartoes]; 
   }
 
-  void adicionarCartao(Map<String, String> cartao) {
-    _cartoes.add(cartao);
-    notifyListeners(); // Notifica os ouvintes da mudança
+  void addCard(Map<String, String> card) {
+    _cartoes.add(card);
+    notifyListeners();
   }
 }
